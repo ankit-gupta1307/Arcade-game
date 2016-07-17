@@ -24,13 +24,10 @@ var Enemo = function(x,y) {
 };
 
 
-// Update the enemy's position, required method for game
-// Parameter: dt, a time delta between ticks
+
 Enemies.prototype.update = function(dt) {
-    // You should multiply any movement by the dt parameter
-    // which will ensure the game runs at the same speed for
-    // all computers.
-	/*this.x = this.x + 101 * dt * this.multiplier;
+   
+	this.x = this.x + 101 * dt * this.multiplier;
 	 if(this.y - 15 == player.y  && (this.x > player.x - 20 && this.x < player.x + 20)) {
 		 player.lives--;
 		 document.getElementsByClassName('lives')[0].innerHTML = 'Lives: ' + player.lives;
@@ -42,7 +39,7 @@ Enemies.prototype.update = function(dt) {
 		  
 		 }
 		 
-	 } */
+	 } 
 	 if (this.x > 705) {
 		 this.reset();
 	 }
@@ -55,7 +52,7 @@ Enemo.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
 	this.x = this.x  - 101 * dt * this.multiplier;
-	 /* if(this.y - 15 == player.y  && (this.x > player.x - 20 && this.x < player.x + 20)) {
+	 if(this.y - 15 == player.y  && (this.x > player.x - 20 && this.x < player.x + 20)) {
 		 player.lives--;
 		 document.getElementsByClassName('lives')[0].innerHTML = 'Lives: ' + player.lives;
 		 if(player.lives === 0) {
@@ -66,7 +63,7 @@ Enemo.prototype.update = function(dt) {
 		  
 		 }
 		 
-	 } */
+	 } 
 	 if (this.x < -200) {
 		 this.reset();
 	 }
